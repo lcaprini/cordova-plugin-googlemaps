@@ -54,14 +54,14 @@
         NSString *clsName = [webview className];
         NSURL *url;
         NSString *currentURL;
-        if ([clsName isEqualToString:@"UIWebView"]) {
-          //------------------------------------------
-          // UIWebView
-          //------------------------------------------
-          url = ((UIWebView *)cdvViewController.webView).request.URL;
-          currentURL = url.absoluteString;
+        // if ([clsName isEqualToString:@"UIWebView"]) {
+        //   //------------------------------------------
+        //   // UIWebView
+        //   //------------------------------------------
+        //   url = ((UIWebView *)cdvViewController.webView).request.URL;
+        //   currentURL = url.absoluteString;
 
-        } else {
+        // } else {
           //------------------------------------------
           // WKWebView
           //------------------------------------------
@@ -70,7 +70,7 @@
           if (![[url lastPathComponent] isEqualToString:@"/"]) {
             currentURL = [currentURL stringByReplacingOccurrencesOfString:[url lastPathComponent] withString:@""];
           }
-        }
+        // }
         // remove page unchor (i.e index.html#page=test, index.html?key=value)
         regex = [NSRegularExpression regularExpressionWithPattern:@"[#\\?].*$" options:NSRegularExpressionCaseInsensitive error:&error];
         currentURL = [regex stringByReplacingMatchesInString:currentURL options:0 range:NSMakeRange(0, [currentURL length]) withTemplate:@""];

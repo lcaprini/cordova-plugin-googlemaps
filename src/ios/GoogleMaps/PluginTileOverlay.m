@@ -86,11 +86,11 @@
           id webview = cdvViewController.webView;
           NSString *clsName = [webview className];
           NSURL *url;
-          if ([clsName isEqualToString:@"UIWebView"]) {
-            url = ((UIWebView *)cdvViewController.webView).request.URL;
-          } else {
+          // if ([clsName isEqualToString:@"UIWebView"]) {
+          //   url = ((UIWebView *)cdvViewController.webView).request.URL;
+          // } else {
             url = [webview URL];
-          }
+          // }
           NSString *webPageUrl = url.absoluteString;
           [options setObject:webPageUrl forKey:@"webPageUrl"];
           [options setObject:self.mapCtrl.mapId forKey:@"mapId"];
