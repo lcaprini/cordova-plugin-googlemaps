@@ -52,7 +52,7 @@
 
         id webview = cdvViewController.webView;
         NSString *clsName = [webview className];
-        NSURL *url;
+        // NSURL *url;
         NSString *currentURL;
         // if ([clsName isEqualToString:@"UIWebView"]) {
         //   //------------------------------------------
