@@ -219,7 +219,7 @@
                   CDVViewController *cdvViewController = (CDVViewController*)self.viewController;
                   id webview = cdvViewController.webView;
                   NSString *clsName = [webview className];
-                  NSURL *url;
+                //   NSURL *url;
                 //   if ([clsName isEqualToString:@"UIWebView"]) {
                 //     url = ((UIWebView *)cdvViewController.webView).request.URL;
                 //     NSString *currentURL = url.absoluteString;
